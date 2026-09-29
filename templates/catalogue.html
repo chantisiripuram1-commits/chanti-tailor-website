@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Catalogue | Chanti Tailor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        🧵 Chanti Tailor
+    </div>
+
+    <nav>
+
+        <a href="{{ url_for('home') }}">Home</a>
+
+        <a href="{{ url_for('about') }}">About</a>
+
+        <a href="{{ url_for('services') }}">Services</a>
+
+        <a href="{{ url_for('catalogue') }}">
+            Catalogue
+        </a>
+
+        <a href="{{ url_for('custom_design') }}">
+            Custom Design
+        </a>
+
+        <a href="{{ url_for('place_order') }}">
+            Place Order
+        </a>
+
+        <a href="{{ url_for('my_orders') }}">
+            My Orders
+        </a>
+
+        <a href="{{ url_for('contact') }}">
+            Contact
+        </a>
+
+        <a href="{{ url_for('login') }}">Login</a>
+
+        <a href="{{ url_for('signup') }}"
+           class="nav-button">
+            Signup
+        </a>
+
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>
+        Our Catalogue
+    </h1>
+
+    <p>
+        Choose your preferred clothing.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                👔
+            </div>
+
+            <h3>
+                Shirt
+            </h3>
+
+            <p>
+                Custom stitched shirt
+            </p>
+
+            <h3>
+                ₹350
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                👖
+            </div>
+
+            <h3>
+                Pant
+            </h3>
+
+            <p>
+                Custom stitched pant
+            </p>
+
+            <h3>
+                ₹500
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🩳
+            </div>
+
+            <h3>
+                Half Pant
+            </h3>
+
+            <p>
+                Comfortable custom fit
+            </p>
+
+            <h3>
+                ₹300
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🥻
+            </div>
+
+            <h3>
+                Kurta
+            </h3>
+
+            <p>
+                Traditional custom kurta
+            </p>
+
+            <h3>
+                ₹500
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🧥
+            </div>
+
+            <h3>
+                Blazer
+            </h3>
+
+            <p>
+                Premium custom blazer
+            </p>
+
+            <h3>
+                ₹3000
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🤵
+            </div>
+
+            <h3>
+                Suit
+            </h3>
+
+            <p>
+                Complete customized suit
+            </p>
+
+            <h3>
+                ₹4000
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order Now
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>
+        🧵 Chanti Tailor
+    </h3>
+
+    <p>
+        Perfect Fit. Perfect Style.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

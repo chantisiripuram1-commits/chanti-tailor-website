@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Place Order | Chanti Tailor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        🧵 Chanti Tailor
+    </div>
+
+    <nav>
+
+        <a href="{{ url_for('home') }}">Home</a>
+
+        <a href="{{ url_for('about') }}">About</a>
+
+        <a href="{{ url_for('services') }}">Services</a>
+
+        <a href="{{ url_for('catalogue') }}">Catalogue</a>
+
+        <a href="{{ url_for('custom_design') }}">
+            Custom Design
+        </a>
+
+        <a href="{{ url_for('place_order') }}">
+            Place Order
+        </a>
+
+        <a href="{{ url_for('my_orders') }}">
+            My Orders
+        </a>
+
+        <a href="{{ url_for('contact') }}">
+            Contact
+        </a>
+
+        <a href="{{ url_for('login') }}">Login</a>
+
+        <a href="{{ url_for('signup') }}"
+           class="nav-button">
+            Signup
+        </a>
+
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>
+        Place Your Order
+    </h1>
+
+    <p>
+        Give us your details and measurements.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="auth-card">
+
+        <h2>
+            Order Form
+        </h2>
+
+
+        <form
+            method="POST"
+            action="{{ url_for('place_order') }}">
+
+
+            <div class="form-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Select Product
+                </label>
+
+                <select
+                    name="product"
+                    required>
+
+                    <option value="">
+                        Select Product
+                    </option>
+
+                    <option value="Shirt">
+                        Shirt - ₹350
+                    </option>
+
+                    <option value="Pant">
+                        Pant - ₹500
+                    </option>
+
+                    <option value="Half Pant">
+                        Half Pant - ₹300
+                    </option>
+
+                    <option value="Kurta">
+                        Kurta - ₹500
+                    </option>
+
+                    <option value="Blazer">
+                        Blazer - ₹3000
+                    </option>
+
+                    <option value="Suit">
+                        Suit - ₹4000
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <h3>
+                Measurements
+            </h3>
+
+            <br>
+
+
+            <div class="form-group">
+
+                <label>
+                    Chest
+                </label>
+
+                <input
+                    type="number"
+                    name="chest"
+                    placeholder="Chest measurement"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Waist
+                </label>
+
+                <input
+                    type="number"
+                    name="waist"
+                    placeholder="Waist measurement"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Length
+                </label>
+
+                <input
+                    type="number"
+                    name="length"
+                    placeholder="Length measurement"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Additional Instructions
+                </label>
+
+                <textarea
+                    name="instructions"
+                    rows="5"
+                    placeholder="Any special instructions?"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="full-button">
+
+                Place Order
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>
+        🧵 Chanti Tailor
+    </h3>
+
+    <p>
+        Perfect Fit. Perfect Style.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

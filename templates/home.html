@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Chanti Tailor | Home</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🧵 Chanti Tailor
+    </div>
+
+    <nav>
+
+        <a href="{{ url_for('home') }}">
+            Home
+        </a>
+
+        <a href="{{ url_for('about') }}">
+            About
+        </a>
+
+        <a href="{{ url_for('services') }}">
+            Services
+        </a>
+
+        <a href="{{ url_for('catalogue') }}">
+            Catalogue
+        </a>
+
+        <a href="{{ url_for('custom_design') }}">
+            Custom Design
+        </a>
+
+        <a href="{{ url_for('place_order') }}">
+            Place Order
+        </a>
+
+        <a href="{{ url_for('my_orders') }}">
+            My Orders
+        </a>
+
+        <a href="{{ url_for('contact') }}">
+            Contact
+        </a>
+
+        <a href="{{ url_for('login') }}">
+            Login
+        </a>
+
+        <a href="{{ url_for('signup') }}"
+           class="nav-button">
+            Signup
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            WELCOME TO CHANTI TAILOR
+        </p>
+
+        <h1>
+            Perfect Fit.<br>
+            Perfect Style.
+        </h1>
+
+        <p>
+            Professional tailoring with quality fabrics,
+            modern designs and personalized measurements.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('catalogue') }}"
+               class="btn">
+                Explore Catalogue
+            </a>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn secondary-btn">
+                Place Order
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>ABOUT US</p>
+
+        <h2>
+            Tailoring Made With Care
+        </h2>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <div>
+
+            <h3>
+                Your Style, Our Craft
+            </h3>
+
+            <p>
+                Chanti Tailor provides customized
+                tailoring services for customers
+                who want comfortable fitting and
+                stylish clothing.
+            </p>
+
+            <p>
+                From measurements to final stitching,
+                every order is prepared with attention
+                to detail.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <h3>
+                Why Choose Us?
+            </h3>
+
+            <ul>
+
+                <li>✔ Perfect Measurements</li>
+
+                <li>✔ Quality Stitching</li>
+
+                <li>✔ Modern Designs</li>
+
+                <li>✔ Affordable Prices</li>
+
+                <li>✔ Custom Orders</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section light-section">
+
+    <div class="section-title">
+
+        <p>OUR SERVICES</p>
+
+        <h2>
+            What We Offer
+        </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">
+                👔
+            </div>
+
+            <h3>
+                Shirt Tailoring
+            </h3>
+
+            <p>
+                Custom shirts designed and stitched
+                according to your measurements.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                👖
+            </div>
+
+            <h3>
+                Pant Tailoring
+            </h3>
+
+            <p>
+                Comfortable and stylish pants
+                with personalized measurements.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🥻
+            </div>
+
+            <h3>
+                Kurta
+            </h3>
+
+            <p>
+                Traditional clothing with
+                customized fitting.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🧥
+            </div>
+
+            <h3>
+                Suit & Blazer
+            </h3>
+
+            <p>
+                Professional suits and blazers
+                for special occasions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATALOGUE PREVIEW ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>CATALOGUE</p>
+
+        <h2>
+            Popular Products
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                👔
+            </div>
+
+            <h3>
+                Shirt
+            </h3>
+
+            <p>
+                Starting from
+            </p>
+
+            <h3>
+                ₹350
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order
+            </a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                👖
+            </div>
+
+            <h3>
+                Pant
+            </h3>
+
+            <p>
+                Starting from
+            </p>
+
+            <h3>
+                ₹500
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order
+            </a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🧥
+            </div>
+
+            <h3>
+                Blazer
+            </h3>
+
+            <p>
+                Starting from
+            </p>
+
+            <h3>
+                ₹3000
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order
+            </a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🤵
+            </div>
+
+            <h3>
+                Suit
+            </h3>
+
+            <p>
+                Starting from
+            </p>
+
+            <h3>
+                ₹4000
+            </h3>
+
+            <a href="{{ url_for('place_order') }}"
+               class="btn">
+                Order
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="contact-section">
+
+    <h2>
+        Ready To Get Your Perfect Fit?
+    </h2>
+
+    <p>
+        Create an account and place your
+        tailoring order today.
+    </p>
+
+    <a href="{{ url_for('signup') }}"
+       class="btn">
+        Create Account
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        🧵 Chanti Tailor
+    </h3>
+
+    <p>
+        Perfect Fit. Perfect Style.
+    </p>
+
+    <p>
+        © 2026 Chanti Tailor. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+
+</html>
