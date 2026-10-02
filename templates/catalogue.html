@@ -17,51 +17,7 @@
 
 <body>
 
-
-<header class="navbar">
-
-    <div class="logo">
-        🧵 Chanti Tailor
-    </div>
-
-    <nav>
-
-        <a href="{{ url_for('home') }}">Home</a>
-
-        <a href="{{ url_for('about') }}">About</a>
-
-        <a href="{{ url_for('services') }}">Services</a>
-
-        <a href="{{ url_for('catalogue') }}">
-            Catalogue
-        </a>
-
-        <a href="{{ url_for('custom_design') }}">
-            Custom Design
-        </a>
-
-        <a href="{{ url_for('place_order') }}">
-            Place Order
-        </a>
-
-        <a href="{{ url_for('my_orders') }}">
-            My Orders
-        </a>
-
-        <a href="{{ url_for('contact') }}">
-            Contact
-        </a>
-
-        <a href="{{ url_for('login') }}">Login</a>
-
-        <a href="{{ url_for('signup') }}"
-           class="nav-button">
-            Signup
-        </a>
-
-    </nav>
-
-</header>
+{% include 'navbar.html' %}
 
 
 <section class="page-header">
@@ -85,7 +41,9 @@
         <div class="product-card">
 
             <div class="product-image">
-                👔
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQebUdKhcMd1ui1U3X28FV8rn-twD5x-2fCd7mL3K2GsQ&s=10"
+         width="220"
+         height="190">
             </div>
 
             <h3>
@@ -111,7 +69,9 @@
         <div class="product-card">
 
             <div class="product-image">
-                👖
+<img src="https://www.jackjones.in/cdn/shop/files/901005501_g6.jpg?v=1745345265&width=1080"
+         width="220"
+         height="190">
             </div>
 
             <h3>
@@ -137,7 +97,9 @@
         <div class="product-card">
 
             <div class="product-image">
-                🩳
+                <img src="https://byogi.store/cdn/shop/products/Half_Pant_Front.JPG?v=1587208685"
+         width="220"
+         height="190">
             </div>
 
             <h3>
@@ -163,7 +125,9 @@
         <div class="product-card">
 
             <div class="product-image">
-                🥻
+                 <img src="https://i.pinimg.com/564x/7c/53/f2/7c53f2d86f3a0bdc24a56c46a13725e6.jpg"
+         width="220"
+         height="190">
             </div>
 
             <h3>
@@ -189,7 +153,9 @@
         <div class="product-card">
 
             <div class="product-image">
-                🧥
+                 <img src="https://media.istockphoto.com/id/1152838910/photo/male-dark-blue-blazer-on-isolated-background.jpg?s=612x612&w=0&k=20&c=B-hs6BnK3YMGEqZcoV1MLZ6mPf3HJMHABui0ZwUaKhU="
+         width="220"
+         height="190">
             </div>
 
             <h3>
@@ -215,7 +181,9 @@
         <div class="product-card">
 
             <div class="product-image">
-                🤵
+                 <img src="https://5.imimg.com/data5/SELLER/Default/2021/3/YC/EU/QF/93244141/mens-formal-wear-three-piece-suit-500x500.jpg"
+         width="220"
+         height="190">
             </div>
 
             <h3>

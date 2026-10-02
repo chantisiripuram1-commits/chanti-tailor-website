@@ -1,6 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
+
+# Secret key for sessions
+app.secret_key = "chanti-tailor-secret-key"
 
 
 # =====================================
@@ -101,19 +104,16 @@ def login():
 
     if request.method == "POST":
 
-        email = request.form.get("email")
-        password = request.form.get("password")
+        email = request.form["email"]
 
-        print("Login Email:", email)
-        print("Login Password:", password)
+        session["user"] = email
 
-        return """
-        <h1>Login Submitted!</h1>
-        <p>Login system will be connected to MySQL later.</p>
-        <a href="/">Go Back Home</a>
-        """
+        return redirect("/")
 
-    return render_template("login.html")
+    return render_template(
+        "login.html",
+        user=session.get("user")
+    )
 
 
 # =====================================
@@ -125,42 +125,33 @@ def signup():
 
     if request.method == "POST":
 
-        name = request.form.get("name")
-        email = request.form.get("email")
-        password = request.form.get("password")
-        confirm_password = request.form.get("confirm_password")
+        name = request.form["name"]
+        email = request.form["email"]
+        password = request.form["password"]
 
-        # Check passwords
-        if password != confirm_password:
+        # For now, just store the user's name in session
+        session["user"] = name
 
-            return """
-            <h1>Passwords do not match!</h1>
-            <a href="/signup">Try Again</a>
-            """
+        return redirect("/")
 
-        print("Name:", name)
-        print("Email:", email)
+    return render_template(
+        "signup.html",
+        user=session.get("user")
+    )
 
-        return f"""
-        <h1>Signup Successful!</h1>
 
-        <h2>Welcome, {name}!</h2>
+# =====================================
+# LOGOUT
+# =====================================
 
-        <p>Your account has been created successfully.</p>
+@app.route("/logout")
+def logout():
 
-        <p>Email: {email}</p>
+    session.pop("user", None)
 
-        <br>
+    return redirect("/")
 
-        <a href="/login">Go to Login</a>
 
-        <br><br>
-
-        <a href="/">Go Back Home</a>
-        """
-
-    # If user simply opens /signup
-    return render_template("signup.html")
 # =====================================
 # RUN APPLICATION
 # =====================================
