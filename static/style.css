@@ -17,7 +17,15 @@ body {
 
     font-family: Arial, sans-serif;
 
-    background: #f8f5f0;
+    background: linear-gradient(
+        135deg,
+        #F5EFE6 0%,
+        #DCC7AA 50%,
+        #70452B 100%
+    );
+
+    background-attachment: fixed;
+    color: #30251F;
 
     color: #29231f;
 
@@ -42,7 +50,7 @@ body {
 
     align-items: center;
 
-    background: white;
+    background: rgb(255, 255, 254);
 
     border-bottom: 1px solid #e5ddd5;
 
@@ -94,7 +102,7 @@ nav a {
 
 nav a:hover {
 
-    color: #9a5b32;
+    color: #cf651f;
 
 }
 
@@ -115,128 +123,167 @@ nav a:hover {
 /* =========================================
    HERO
 ========================================= */
-.hero {
+/* =========================================
+   FULL WIDTH HERO SLIDER
+========================================= */
 
-    min-height: 620px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 80px 10%;
-
-    background:
-
-        linear-gradient(
-            rgba(40, 25, 15, 0.70),
-            rgba(40, 25, 15, 0.70)
-        ),
-
-        url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80");
-
-    background-size: cover;
-
-    background-position: center;
-
+.hero-slider {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
 }
 
 
+/* SLIDES */
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slidePhotos 16s infinite;
+}
+
+
+.slide {
+    width: 25%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* DARK OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 18, 10, 0.55);
+    z-index: 2;
+}
+
+
+/* TEXT ON PHOTO */
+
 .hero-content {
-
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
     max-width: 650px;
-
     color: white;
-
+    z-index: 3;
 }
 
 
 .small-title {
-
-    color: #b7784d;
-
+    color: #f0b27a;
     font-weight: bold;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 10px;
-
+    letter-spacing: 3px;
+    margin-bottom: 12px;
 }
 
 
-.hero h1 {
-
+.hero-content h1 {
     font-size: 65px;
-
     line-height: 1.1;
-
     margin-bottom: 20px;
-
 }
 
 
-.hero p {
-
+.hero-content > p:not(.small-title) {
     font-size: 18px;
-
     margin-bottom: 30px;
-
+    max-width: 600px;
 }
 
 
 .hero-buttons {
-
     display: flex;
-
     gap: 15px;
-
 }
 
 
+/* BUTTON */
+
 .btn {
-
     display: inline-block;
-
     text-decoration: none;
-
     background: #8a4f2b;
-
     color: white;
-
     padding: 13px 25px;
-
     border-radius: 6px;
-
     font-weight: bold;
-
     border: none;
-
     cursor: pointer;
-
 }
 
 
 .btn:hover {
-
     background: #6d3f25;
-
 }
 
 
 .secondary-btn {
-
     background: transparent;
-
     border: 1px solid white;
-
 }
 
 
 .secondary-btn:hover {
-
     background: white;
-
     color: #6d3f25;
+}
 
+
+/* =========================================
+   SLIDE ANIMATION
+========================================= */
+
+@keyframes slidePhotos {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    45% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    70% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-75%);
+    }
+
+    95% {
+        transform: translateX(-75%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 
@@ -884,4 +931,16 @@ footer p {
 
     }
 
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 20px;
+    margin: 15px auto;
+    width: fit-content;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
 }

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 
 app = Flask(__name__)
 
@@ -68,11 +68,9 @@ def place_order():
         print("Phone:", phone)
         print("Product:", product)
 
-        return """
-        <h1>Order Submitted Successfully!</h1>
-        <p>Thank you for choosing Chanti Tailor.</p>
-        <a href="/">Go Back Home</a>
-        """
+        flash("Order placed successfully!", "success")
+
+        return redirect(url_for("place_order"))
 
     return render_template("place_order.html")
 
@@ -157,4 +155,4 @@ def logout():
 # =====================================
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True)  
